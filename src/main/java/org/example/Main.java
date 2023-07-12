@@ -24,7 +24,6 @@ public class Main {
         chooseBossDefence();
         bossHits();
         heroesHit();
-
         printStatistics();
     }
     public static void medicHeal(){
@@ -33,10 +32,11 @@ public class Main {
             for (int i = 0; i < heroesHealth.length; i++) {
                 if (heroesHealth[i] > 0 && heroesHealth[i] < 100 && i != 3) {
                     Random random = new Random();
-                    int healHeroes = random.nextInt(50)+1;
+                    int healHeroes = random.nextInt(100)+1;
                     heroesHealth[i] += healHeroes;
                     System.out.println("Medic healed" +" "+ heroesAttackType[i] + " "+ healHeroes +" "+ "health");
                     hasHealed=true;
+                    break;
 
                 }
 
